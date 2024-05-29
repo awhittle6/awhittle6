@@ -44,8 +44,8 @@ I am Anderson Whittle, the CTO & Founder of **Real Hire**, a cutting-edge recrui
 - [Twitter](https://twitter.com/anderson_whittle)
 - [Email](mailto:anderson.whittle@example.com)
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=awhittle6&show_icons=true&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=awhittle6&layout=compact&theme=radical)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=awhittle6&show_icons=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=awhittle6&layout=compact)
 
 ### Projects
 
