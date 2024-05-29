@@ -1,16 +1,60 @@
-## Hi there 👋
+# Hi there, I'm Anderson Whittle 👋
 
-<!--
-**awhittle6/awhittle6** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+![Profile Views](https://komarev.com/ghpvc/?username=your-github-username&color=blue)
 
-Here are some ideas to get you started:
+## About Me
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I am Anderson Whittle, currently pursuing a Master of Science in Computer Science (MSCS) at Georgia Tech, specializing in Machine Learning. I am also the CTO & Founder of **Real Hire**, a cutting-edge recruiting SaaS.
+
+### My Journey
+
+- **CTO & Founder at Real Hire**
+  - Leading the development of an innovative recruiting platform.
+  - Focused on integrating advanced AI solutions to streamline hiring processes.
+
+- **Machine Learning Engineer at Wells Fargo**
+  - Lead developer for a synthetic data generation project.
+  - Specialized in anonymizing PII data for secure processing.
+
+### My Skillset
+
+- **Generative AI**
+  - Creating AI models that generate content, from text to images.
+  
+- **Web and iOS Development**
+  - Building dynamic web applications and seamless iOS experiences.
+
+- **Node.js & Go**
+  - Developing scalable backend systems using modern frameworks.
+
+- **PyTorch**
+  - Model building, testing, and development for deep learning applications.
+
+- **Reinforcement Learning**
+  - Building and testing Double Deep Q-Networks (DDQN) for game automation projects.
+
+- **Cybersecurity Web Principles**
+  - Implementing secure coding practices.
+  - Ensuring data encryption and secure transmission.
+  - Regularly performing security audits and vulnerability assessments.
+
+### Connect with Me
+
+- [LinkedIn](https://www.linkedin.com/in/anderson-whittle)
+- [Twitter](https://twitter.com/anderson_whittle)
+- [Email](mailto:anderson.whittle@example.com)
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=your-github-username&show_icons=true&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=your-github-username&layout=compact&theme=radical)
+
+### Projects
+
+Check out some of my projects:
+
+- [Real Hire](https://github.com/your-github-username/real-hire)
+- [Synthetic Data Generator](https://github.com/your-github-username/synthetic-data-generator)
+- [Reinforcement Learning Game Automation](https://github.com/your-github-username/game-automation)
+- [My Portfolio](https://github.com/your-github-username/portfolio)
+
+Feel free to reach out if you have any questions or collaboration ideas. Let's innovate together!
+
