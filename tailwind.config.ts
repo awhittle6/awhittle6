@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        hammer: {
+          '0%, 100%' : { transform: 'rotate(0deg)'},
+          '50%' : { transform: 'rotate(83.7deg)'}
+        },
+      },
+      animation: {
+        hammer: 'hammer 1.5s ease-in-out infinite',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
