@@ -7,7 +7,7 @@ I am Anderson Whittle, the CTO & Founder of **Real Hire**, a cutting-edge recrui
 
 ### My Journey
 
-- **CTO & Founder at Real Hire**
+- **CTO & Co-Founder at Real Hire**
   - Leading the development of an innovative recruiting platform.
   - Developlment of full stack application with best practices for security, devops, and fundamental programming for a smooth user experience.
   - Focused on integrating advanced AI solutions to streamline hiring processes.
