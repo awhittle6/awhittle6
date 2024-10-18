@@ -1,4 +1,4 @@
-# Hi there, I'm [Anderson Whittle](https://andersonwhittle.dev) 👋🥸
+# Hi there, I'm [Anderson Whittle](https://andersonwhittle.dev) 👋
 ![Profile Views](https://komarev.com/ghpvc/?username=your-github-username&color=blue)
 ## About Me
 
