@@ -1,11 +1,16 @@
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowDown } from "react-icons/fa6";
 
 const Hero = () => {
+    const handleScrollToAboutMe = () => {
+        const aboutMeSection = document.getElementById("about");
+        if (aboutMeSection) {
+          aboutMeSection.scrollIntoView({ behavior: "smooth" }); // Smoothly scroll to the section
+        }
+      };
   return (
-    <div id="hero" className="text-4xl font-bold flex flex-col items-center space-y-3">
+    <div id="hero" className="text-4xl font-[300] flex flex-col items-center space-y-3">
       <motion.div
         initial={{ x: -200 }}
         animate={{ x: 0 }}
@@ -22,10 +27,11 @@ const Hero = () => {
         I&#39;m an Applied AI Engineer
       </motion.div>
       <motion.button
+        onClick={handleScrollToAboutMe}
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, delay: 1, ease: "easeOut" }}
-        className="px-4 py-2 bg-blue-500 text-white rounded flex items-center gap-2"
+        className=" text-xl px-2 py-1 bg-blue-500 text-white rounded flex items-center gap-2"
       >
         <span>See below</span>
         <FaArrowDown />
