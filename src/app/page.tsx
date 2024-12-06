@@ -1,7 +1,9 @@
 'use client';
 import AboutMe from "@/components/AboutMe";
+import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import ParticlesBackground from "@/components/ParticlesBackground";
+import Projects from "@/components/Projects";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
@@ -13,7 +15,7 @@ export default function HomePage() {
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
-  const educationRef = useRef<HTMLDivElement>(null);
+  const conactRef = useRef<HTMLDivElement>(null);
 
   // Scroll to the section based on the hash in the URL
   useEffect(() => {
@@ -23,7 +25,7 @@ export default function HomePage() {
         'about': aboutMeRef,
         'projects': projectsRef,
         'experience': experienceRef,
-        'education': educationRef,
+        'education': conactRef,
       };
 
       const targetRef = sectionMap[hash];
@@ -41,7 +43,7 @@ export default function HomePage() {
         <Hero />
       </div>
             {/* Navbar */}
-      <motion.nav
+      {/* <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y:   -20 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
@@ -58,7 +60,7 @@ export default function HomePage() {
           <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
         </ul>
-      </motion.nav>
+      </motion.nav> */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -77,21 +79,22 @@ export default function HomePage() {
           ref={projectsRef}
           className="min-h-screen flex items-center justify-center"
         >
-          <h2 className="text-3xl font-bold">Projects</h2>
+          <Projects />
         </section>
-        <section
+        {/* <section
           id="experience"
           ref={experienceRef}
           className="min-h-screen flex items-center justify-center"
         >
           <h2 className="text-3xl font-bold">Experience</h2>
-        </section>
+        </section> */}
         <section
-          id="education"
-          ref={educationRef}
+          id="contact"
+          ref={conactRef}
           className="min-h-screen flex items-center justify-center"
         >
-          <h2 className="text-3xl font-bold">Education</h2>
+          
+          <Contact />
         </section>
       </motion.div>
     </>

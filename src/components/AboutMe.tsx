@@ -16,6 +16,7 @@ import { FaDocker } from "react-icons/fa";
 import { AiOutlineKubernetes } from "react-icons/ai";
 import { FaJava } from "react-icons/fa";
 import { FaLinux } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
 
 const ICON_SIZE = 100; // Define a constant for icon size
 const ICON_COLOR = "#7797ed"; // Define a constant for icon color
@@ -33,11 +34,11 @@ const AboutMe = () => {
           height={300}
         />
       </Link>
-      <p className="px-6 max-w-2xl text-xl font-[300]">
+      <p className="px-6 max-w-2xl text-xl font-[300] pt-8">
         Dynamic and results-driven Engineer with over five years of experience in pioneering cutting-edge technologies. Proven expertise in developing scalable AI-driven software, robust web applications, and user-focused platforms. Co-founded and led a tech startup, driving the development of a full-stack application that scaled to over 10,000 users and secured $10M in funding. Acclaimed for leadership in managing cross-functional teams and spearheading innovative AI solutions that align with strategic business objectives. Recognized for blending technical acumen with strategic vision to deliver impactful results.
       </p>
-      <div className="grid grid-cols-3 gap-8 mt-16"> {/* Increased gap from 4 to 8 */}
-        {[SiTypescript, FaSwift, FaPython, SiPytorch, SiTensorflow, FaJenkins, FaAws, FaDigitalOcean, FaRust, FaGit, FaDocker, AiOutlineKubernetes, FaJava, FaLinux].map(
+      <div className="grid grid-cols-3 gap-8 pt-8"> {/* Increased gap from 4 to 8 */}
+        {[SiTypescript, FaSwift, FaPython, SiPytorch, SiTensorflow, FaJenkins, FaAws, FaDigitalOcean, FaRust, FaGit, FaDocker, AiOutlineKubernetes, FaJava, FaLinux, FaReact].map(
           (Icon, index) => (
             <div
               key={index}
