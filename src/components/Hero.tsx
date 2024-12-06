@@ -19,7 +19,7 @@ const Hero = () => {
         animate={{ x: 0 }}
         transition={{ duration: 0.3, delay: 0.1, ease: "linear" }}
       >
-        I'm an Applied AI Engineer
+        I&#39;m an Applied AI Engineer
       </motion.div>
       <motion.button
         initial={{ opacity: 0, scale: 0.5 }}

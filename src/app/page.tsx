@@ -1,10 +1,12 @@
 'use client'
 import Hero from "@/components/Hero";
 import ParticlesBackground from "@/components/ParticlesBackground";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 // src/app/page.tsx
 export default function HomePage() {
+  const router = useRouter()
+
   return (
     <>
     <ParticlesBackground />
