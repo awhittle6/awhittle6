@@ -31,11 +31,12 @@ const Projects = () => {
       <h2 className="text-4xl font-bold">Projects</h2>
       <div className="grid grid-cols-1 gap-6 mt-6 px-32">
         {PROJECTS.map((project, index) => (
-          <Link href={project.link} className='py-3'>
+          
           <div
             key={index}
             className="flex flex-col items-center bg-gradient-to-r from-purple-400 via-blue-500 to-green-400 shadow-md rounded-lg p-4 hover:shadow-lg transition-shadow"
           >
+            
             {project.image && <Image
               src={project.image}
               alt={project.name}
@@ -43,12 +44,12 @@ const Projects = () => {
               height={80} // Reduced size
               className="rounded-md"
             />}
+            <Link href={project.link} className='py-3'>
             <h3 className="text-xl font-semibold mt-3 text-black">{project.name}</h3>
             <p className="text-gray-500 mt-2 text-sm">{project.description}</p>
-            
+            </Link>
             
           </div>
-          </Link>
         ))}
       </div>
     </div>
