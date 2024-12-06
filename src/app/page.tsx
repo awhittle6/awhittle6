@@ -4,6 +4,7 @@ import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import ParticlesBackground from "@/components/ParticlesBackground";
 import Projects from "@/components/Projects";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
@@ -15,17 +16,17 @@ export default function HomePage() {
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
-  const conactRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   // Scroll to the section based on the hash in the URL
   useEffect(() => {
     const hash = pathname.split('#')[1];
     if (hash) {
       const sectionMap: Record<string, React.RefObject<HTMLDivElement>> = {
-        'about': aboutMeRef,
-        'projects': projectsRef,
-        'experience': experienceRef,
-        'education': conactRef,
+        about: aboutMeRef,
+        projects: projectsRef,
+        experience: experienceRef,
+        contact: contactRef,
       };
 
       const targetRef = sectionMap[hash];
@@ -42,25 +43,6 @@ export default function HomePage() {
       <div className="relative z-10 flex flex-col items-center justify-center h-screen text-center text-white">
         <Hero />
       </div>
-            {/* Navbar */}
-      {/* <motion.nav
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y:   -20 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-        className={`fixed top-0 w-full bg-black bg-opacity-50 text-white p-4 z-50 transition-transform ${'shadow-lg'
-        }`}
-        style={{
-          position:"fixed",
-          top:  "auto",
-        }}
-      >
-        <ul className="flex justify-center space-x-4">
-          <li><a href="#about-me">About Me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-        </ul>
-      </motion.nav> */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -81,23 +63,38 @@ export default function HomePage() {
         >
           <Projects />
         </section>
-        {/* <section
-          id="experience"
-          ref={experienceRef}
-          className="min-h-screen flex items-center justify-center"
-        >
-          <h2 className="text-3xl font-bold">Experience</h2>
-        </section> */}
         <section
           id="contact"
-          ref={conactRef}
+          ref={contactRef}
           className="min-h-screen flex items-center justify-center"
         >
-          
           <Contact />
         </section>
+        <footer className=" text-white py-6 text-center">
+        <div className="flex justify-center space-x-6">
+          <a
+            href="https://github.com/awhittle6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xl hover:text-gray-400"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/anderson-whittle/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xl hover:text-gray-400"
+          >
+            <FaLinkedin />
+          </a>
+        </div>
+        <p className="mt-4 text-sm text-gray-500">
+          © {new Date().getFullYear()} Anderson Whittle. All rights reserved.
+        </p>
+      </footer>
       </motion.div>
+
     </>
   );
 }
-

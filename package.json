@@ -10,6 +10,7 @@
     "stop": "pm2 stop ecosystem.config.js"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.7.1",
     "autoprefixer": "^10.4.19",
@@ -17,7 +18,9 @@
     "next": "^14.2.20",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^5.4.0"
+    "react-hook-form": "^7.53.2",
+    "react-icons": "^5.4.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",
