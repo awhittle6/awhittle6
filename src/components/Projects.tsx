@@ -12,6 +12,13 @@ const PROJECTS = [
       "A scalable AI-driven platform that connects people with jobs and jobs with people.",
   },
   {
+    name: "AI Video description",
+    link: "https://github.com/awhittle6/capto",
+    description: 
+      "An open source ML Library used for giving a transcription to videos."
+  },
+
+  {
     name: "E-Commerce App",
     link: "https://www.ecwid.com/",
     description:
@@ -23,6 +30,9 @@ const PROJECTS = [
     description:
       "An open-source machine learning library built in C++ for high-performance model training and inference.",
   },
+  {
+    name: "Op"
+  }
 ];
 
 const Projects = () => {
