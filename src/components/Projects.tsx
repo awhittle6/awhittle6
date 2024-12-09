@@ -54,7 +54,7 @@ const Projects = () => {
               height={80} // Reduced size
               className="rounded-md"
             />}
-            <Link href={project.link} className='py-3'>
+            <Link href={project.link || ''} className='py-3'>
             <h3 className="text-xl font-semibold mt-3 text-black">{project.name}</h3>
             <p className="text-gray-500 mt-2 text-sm">{project.description}</p>
             </Link>
