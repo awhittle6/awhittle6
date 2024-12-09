@@ -29,9 +29,6 @@ const PROJECTS = [
     link: "https://github.com/awhittle6/ml-projects",
     description:
       "An open-source machine learning library built in C++ for high-performance model training and inference.",
-  },
-  {
-    name: "Op"
   }
 ];
 
