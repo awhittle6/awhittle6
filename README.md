@@ -6,7 +6,7 @@ I am Anderson Whittle, a Founding Engineer of **[Real Hire](https://realhire.com
 
 ### My Journey
 
-- **CTO & Co-Founder at Real Hire**
+- **Founding Engineer at Real Hire**
   - Leading the development of an innovative recruiting platform.
   - Developlment of full stack application with best practices for security, devops, and fundamental programming for a smooth user experience.
   - Focused on integrating advanced AI solutions to streamline hiring processes.
