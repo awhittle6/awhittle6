@@ -2,7 +2,7 @@
 ![Profile Views](https://komarev.com/ghpvc/?username=your-github-username&color=blue)
 ## About Me
 
-I am Anderson Whittle, the CTO & Founder of **[Real Hire](https://realhire.app)**, a cutting-edge recruiting SaaS. I'm currently pursuing a Master of Science in Computer Science (MSCS) at Georgia Tech, specializing in Machine Learning.
+I am Anderson Whittle, the CTO of **[Real Hire](https://realhire.app)**, a cutting-edge recruiting SaaS. I'm currently pursuing a Master of Science in Computer Science (MSCS) at Georgia Tech, specializing in Machine Learning.
 
 ### My Journey
 
