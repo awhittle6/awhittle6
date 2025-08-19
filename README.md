@@ -2,11 +2,11 @@
 ![Profile Views](https://komarev.com/ghpvc/?username=your-github-username&color=blue)
 ## About Me
 
-I am Anderson Whittle, a Founding Engineer of **[Real Hire](https://realhire.com)**, a cutting-edge recruiting SaaS. I'm currently pursuing a Master of Science in Computer Science (MSCS) at Georgia Tech, specializing in Machine Learning.
+I am Anderson Whittle, a Founding Engineer of **[Real Hire] (https://realhire.com)**, a cutting-edge recruiting SaaS. I'm currently pursuing a Master of Science in Computer Science (MSCS) at Georgia Tech, specializing in Machine Learning.
 
 ### My Journey
 
-- **Founding Engineer at Real Hire**
+- **Founding Engineer at RealHire**
   - Leading the development of an innovative recruiting platform.
   - Developlment of full stack application with best practices for security, devops, and fundamental programming for a smooth user experience.
   - Focused on integrating advanced AI solutions to streamline hiring processes.
