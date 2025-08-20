@@ -4,7 +4,7 @@
 
 I am Anderson Whittle, a Founding Engineer of **[Real Hire] (https://realhire.com)**, a cutting-edge recruiting SaaS. I'm currently pursuing a Master of Science in Computer Science (MSCS) at Georgia Tech, specializing in Machine Learning.
 
-### My Journey
+###  My Journey
 
 - **Founding Engineer at RealHire**
   - Leading the development of an innovative recruiting platform.
