@@ -1,6 +1,6 @@
 # Anderson Whittle - Personal Portfolio Website
 
-![Profile Views](https://komarev.com/ghpvc/?username=awhittle6&color=blue)
+![Profile Views](https://komarev.com/ghpvc/?username=your-github-username&color=blue)
 
 ## About Me
 
