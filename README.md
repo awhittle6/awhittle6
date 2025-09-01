@@ -1,52 +1,82 @@
-# Hi there, I'm [Anderson Whittle](https://andersonwhittle.dev) 👋
-![Profile Views](https://komarev.com/ghpvc/?username=your-github-username&color=blue)
+# Anderson Whittle - Personal Portfolio Website
+
+![Profile Views](https://komarev.com/ghpvc/?username=awhittle6&color=blue)
+
 ## About Me
 
-I am Anderson Whittle, a Founding Engineer of **[Real Hire] (https://realhire.com)**, a cutting-edge recruiting SaaS. I'm currently pursuing a Master of Science in Computer Science (MSCS) at Georgia Tech, specializing in Machine Learning.
+I am Anderson Whittle, a **Senior Software Engineer at [Autopilot Investments](https://joinautopilot.com)** specializing in Machine Learning, Information Security, and Performance Calculation Services. I'm currently pursuing a Master of Science in Computer Science (MSCS) at Georgia Tech, specializing in Machine Learning.
 
-###  My Journey
+### Current Role
 
-- **Founding Engineer at RealHire**
-  - Leading the development of an innovative recruiting platform.
-  - Developlment of full stack application with best practices for security, devops, and fundamental programming for a smooth user experience.
-  - Focused on integrating advanced AI solutions to streamline hiring processes.
+**Senior Software Engineer at Autopilot Investments** (2025 - Present)
+- Leading ML infrastructure and performance optimization initiatives
+- Architecting AI-driven compliance and support automation systems
+- Spearheading legacy system modernization achieving 67% computation reduction and $500K+ annual savings
+- Building high-performance microservices in Rust for mission-critical financial systems
 
-- **Machine Learning Engineer at Wells Fargo**
-  - Lead developer for a synthetic data generation project.
-  - Specialized in anonymizing PII data for secure processing.
+### My Journey
 
-### My Skillset
+- **CTO & Co-Founder at Real Hire** (2023 - 2025)
+  - Led development of recruiting SaaS platform scaling to 10,000+ users
+  - Secured $300K in Seed funding through technical excellence
+  - Built NLP-driven resume parsing and AI matching algorithms
+  - Managed cross-functional team of 6 engineers
 
-- **Generative AI**
-  - Creating AI models that generate content, from text to images.
-  
-- **Web and iOS Development**
-  - Building dynamic web applications and seamless iOS experiences.
+- **Machine Learning Engineer at Wells Fargo** (2021 - 2023)
+  - Developed PyTorch ML framework supporting 100+ developers
+  - Designed algorithms reducing annual loan losses by $3M
+  - Built real-time anomaly detection systems
 
-- **Node.js & Go**
-  - Developing scalable backend systems using modern frameworks.
+### Technical Expertise
 
-- **PyTorch**
-  - Model building, testing, and development for deep learning applications.
+- **Programming Languages**: Python, Rust, TypeScript, JavaScript, C++, SQL, Bash, Go, Java, Swift
+- **ML & AI**: PyTorch, TensorFlow, Scikit-learn, Hugging Face, LangChain, OpenAI/Anthropic APIs
+- **Infrastructure**: Kubernetes, Docker, Apache Kafka, Airflow, Ray, MLflow
+- **Cloud**: AWS (SageMaker, ECS, EKS), Azure, GCP
+- **Databases**: PostgreSQL, MongoDB, Redis, TimescaleDB, Snowflake
+- **Web Development**: Node.js, React, Next.js, FastAPI, GraphQL
 
-- **Reinforcement Learning**
-  - Building and testing Double Deep Q-Networks (DDQN) for game automation projects.
+### Education
 
-- **Cybersecurity Web Principles**
-  - Implementing secure coding practices.
-  - Ensuring data encryption and secure transmission.
-  - Regularly performing security audits and vulnerability assessments.
+- **M.S. Computer Science and Machine Learning** - Georgia Tech (2022-2025)
+- **B.S. Chemical Engineering and Computer Science** - Georgia Tech (2018-2022)
+
+### Featured Projects
+
+- **Solana Blockchain Token Launch Sniper**: High-performance Rust trading bot with real-time token evaluation
+- **Real-Time Portfolio Risk Analytics**: ML pipeline processing 500K+ events/sec for portfolio risk assessment
+- **Production Performance Manufacturing**: Automated storyboard system for manufacturing analytics
 
 ### Connect with Me
 
-- [LinkedIn](https://www.linkedin.com/in/anderson-whittle)
+- [Portfolio Website](https://andersonwhittle.dev)
+- [LinkedIn](https://www.linkedin.com/in/anderson-whittle/)
+- [GitHub](https://github.com/awhittle6)
 - [Email](mailto:awhittlex2@gmail.com)
 
-### Projects
+## Running the Portfolio Site
 
-Check out some of my projects:
-- [Personal Website](https://realhire.app)
-- [Real Hire](https://realhire.app)
+```bash
+# Install dependencies
+npm install
 
+# Run development server
+npm run dev
 
-Feel free to reach out if you have any questions or collaboration ideas. Let's innovate together!
+# Build for production
+npm run build
+
+# Start production server
+npm run start
+```
+
+## Tech Stack
+
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- React Icons
+
+Feel free to reach out if you have any questions or collaboration ideas. Let's build something amazing together!

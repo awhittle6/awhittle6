@@ -4,6 +4,8 @@ import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import ParticlesBackground from "@/components/ParticlesBackground";
 import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
+import Navigation from "@/components/Navigation";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
@@ -40,6 +42,7 @@ export default function HomePage() {
   return (
     <>
       <ParticlesBackground />
+      <Navigation />
       <div className="relative z-10 flex flex-col items-center justify-center h-screen text-center text-white">
         <Hero />
       </div>
@@ -55,6 +58,13 @@ export default function HomePage() {
           className="min-h-screen flex items-center justify-center"
         >
           <AboutMe />
+        </section>
+        <section
+          id="experience"
+          ref={experienceRef}
+          className="min-h-screen flex items-center justify-center"
+        >
+          <Experience />
         </section>
         <section
           id="projects"
