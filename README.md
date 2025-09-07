@@ -38,7 +38,7 @@ I am Anderson Whittle, a **Senior Software Engineer at [Autopilot Investments](h
 
 ### Education
 
-- **M.S. Computer Science and Machine Learning** - Georgia Tech (2022-2025)
+- **M.S. Computer Science and Machine Learning** - Georgia Tech (2023-2025)
 - **B.S. Chemical Engineering and Computer Science** - Georgia Tech (2018-2022)
 
 ### Featured Projects
