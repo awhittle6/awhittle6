@@ -25,7 +25,7 @@ I am Anderson Whittle, a **Senior Software Engineer at [Autopilot Investments](h
 - **Machine Learning Engineer at Wells Fargo** (2021 - 2023)
   - Developed PyTorch ML framework supporting 100+ developers
   - Designed algorithms reducing annual loan losses by $3M
-  - Built real-time anomaly detection systems
+  - Built online anomaly detection systems
 
 ### Technical Expertise
 
