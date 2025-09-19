@@ -1,7 +1,6 @@
 # Anderson Whittle - Personal Portfolio Website
 
 ![Profile Views](https://komarev.com/ghpvc/?username=your-github-username&color=blue)
-
 ## About Me
 
 I am Anderson Whittle, a **Senior Software Engineer at [Autopilot Investments](https://joinautopilot.com)** specializing in Machine Learning, Information Security, and Performance Calculation Services. 
