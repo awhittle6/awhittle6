@@ -2,14 +2,14 @@
 import AboutMe from "@/components/AboutMe";
 import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
-import ParticlesBackground from "@/components/ParticlesBackground";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Navigation from "@/components/Navigation";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
+
+const MARQUEE_ITEMS = Array.from({ length: 10 });
 
 export default function HomePage() {
   const pathname = usePathname();
@@ -31,62 +31,55 @@ export default function HomePage() {
         contact: contactRef,
       };
 
-      const targetRef = sectionMap[hash];
-      if (targetRef?.current) {
-        // Scroll immediately to the section if hash is detected
-        targetRef.current.scrollIntoView({ behavior: 'smooth' });
-      }
+      sectionMap[hash]?.current?.scrollIntoView({ behavior: 'smooth' });
     }
   }, [pathname]);
 
   return (
-    <>
-      <ParticlesBackground />
+    <main className="bg-black text-white">
       <Navigation />
-      <div className="relative z-10 flex flex-col items-center justify-center h-screen text-center text-white">
+
+      {/* Hero with atmospheric fog rising from the bottom */}
+      <div className="relative flex flex-col items-center justify-center min-h-screen text-center overflow-hidden">
+        <div className="absolute inset-x-0 bottom-0 h-2/3 fog pointer-events-none" />
         <Hero />
       </div>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="relative z-10 flex flex-col items-center justify-center h-auto bg-transparent text-center text-white"
-      >
-        <section
-          id="about"
-          ref={aboutMeRef}
-          className="min-h-screen flex items-center justify-center"
-        >
-          <AboutMe />
-        </section>
-        <section
-          id="experience"
-          ref={experienceRef}
-          className="min-h-screen flex items-center justify-center"
-        >
-          <Experience />
-        </section>
-        <section
-          id="projects"
-          ref={projectsRef}
-          className="min-h-screen flex items-center justify-center"
-        >
-          <Projects />
-        </section>
-        <section
-          id="contact"
-          ref={contactRef}
-          className="min-h-screen flex items-center justify-center"
-        >
-          <Contact />
-        </section>
-        <footer className=" text-white py-6 text-center">
+
+      <section id="about" ref={aboutMeRef}>
+        <AboutMe />
+      </section>
+      <section id="experience" ref={experienceRef}>
+        <Experience />
+      </section>
+      <section id="projects" ref={projectsRef}>
+        <Projects />
+      </section>
+      <section id="contact" ref={contactRef} className="relative overflow-hidden">
+        <div className="absolute inset-x-0 bottom-0 h-1/2 fog pointer-events-none" />
+        <Contact />
+      </section>
+
+      {/* Marquee of the name, like the template's footer */}
+      <div className="relative overflow-hidden py-10 border-t border-white/10">
+        <div className="flex whitespace-nowrap animate-marquee w-max">
+          {MARQUEE_ITEMS.map((_, i) => (
+            <span
+              key={i}
+              className="font-serif italic text-6xl md:text-7xl text-white/10 px-8 select-none"
+            >
+              Anderson Whittle
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <footer className="text-white py-10 text-center border-t border-white/10">
         <div className="flex justify-center space-x-6">
           <a
             href="https://github.com/awhittle6"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl hover:text-gray-400"
+            className="text-xl text-white/50 hover:text-white transition-colors"
           >
             <FaGithub />
           </a>
@@ -94,17 +87,15 @@ export default function HomePage() {
             href="https://www.linkedin.com/in/anderson-whittle/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl hover:text-gray-400"
+            className="text-xl text-white/50 hover:text-white transition-colors"
           >
             <FaLinkedin />
           </a>
         </div>
-        <p className="mt-4 text-sm text-gray-500">
+        <p className="mt-4 text-sm text-white/30">
           © {new Date().getFullYear()} Anderson Whittle. All rights reserved.
         </p>
       </footer>
-      </motion.div>
-
-    </>
+    </main>
   );
 }

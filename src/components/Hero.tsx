@@ -1,105 +1,70 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { FaArrowDown, FaRocket, FaBrain, FaCode } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+
+const ROLES = ["FOUNDER.", "ML ENGINEER.", "BUILDER."];
 
 const Hero = () => {
-    const handleScrollToAboutMe = () => {
-        const aboutMeSection = document.getElementById("about");
-        if (aboutMeSection) {
-          aboutMeSection.scrollIntoView({ behavior: "smooth" });
-        }
-      };
-      
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setRoleIndex((i) => (i + 1) % ROLES.length);
+    }, 2600);
+    return () => clearInterval(id);
+  }, []);
+
+  const handleScrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div id="hero" className="flex flex-col items-center space-y-6 px-4">
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        className="flex items-center gap-4 mb-4"
-      >
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        >
-          <FaBrain className="text-4xl text-purple-400" />
-        </motion.div>
-        <motion.div
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <FaRocket className="text-4xl text-blue-400" />
-        </motion.div>
-        <motion.div
-          animate={{ rotate: [-5, 5, -5] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <FaCode className="text-4xl text-green-400" />
-        </motion.div>
-      </motion.div>
-      
+    <div id="hero" className="relative flex flex-col items-center justify-center space-y-8 px-4 w-full">
       <motion.h1
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-green-400 bg-clip-text text-transparent"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+        className="font-serif text-glow text-6xl md:text-8xl lg:text-9xl leading-none text-white"
       >
-        Anderson Whittle
+        I&rsquo;m <span className="italic">Anderson</span>
       </motion.h1>
-      
-      <motion.div
+
+      <div className="h-[1.1em] overflow-hidden text-5xl md:text-7xl lg:text-8xl">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={ROLES[roleIndex]}
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: "-100%", opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="font-serif text-white/90 tracking-wide"
+          >
+            {ROLES[roleIndex]}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      <motion.button
+        onClick={handleScrollToContact}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-2xl md:text-3xl font-light text-gray-200"
+        transition={{ duration: 0.6, delay: 0.9 }}
+        whileHover={{ scale: 1.04 }}
+        whileTap={{ scale: 0.97 }}
+        className="mt-6 px-10 py-3 rounded-full border border-white/25 bg-white/5 backdrop-blur-sm text-white text-base hover:border-white/60 transition-colors"
       >
-        Senior Software Engineer @ 
-        <motion.span
-          whileHover={{ scale: 1.05 }}
-          className="font-semibold text-blue-400 ml-2"
-        >
-          Autopilot
-        </motion.span>
-      </motion.div>
-      
-      <motion.p
+        Contact
+      </motion.button>
+
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
-        className="text-lg text-gray-300 max-w-2xl text-center"
+        transition={{ duration: 0.6, delay: 1.3 }}
+        className="flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 bg-white/5 text-xs md:text-sm text-white/60 tracking-wide"
       >
-        Applied AI Engineer specializing in ML infrastructure, performance optimization, and scalable systems
-      </motion.p>
-      
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.9 }}
-        className="flex gap-4 flex-wrap justify-center"
-      >
-        {['Machine Learning', 'Full-Stack', 'Cloud Architecture', 'DevOps'].map((skill, index) => (
-          <motion.span
-            key={skill}
-            whileHover={{ scale: 1.1, y: -2 }}
-            className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm border border-white/20"
-          >
-            {skill}
-          </motion.span>
-        ))}
+        <span className="text-white/90">Co-Founder @ WYEA</span>
+        <span className="text-white/30">·</span>
+        <span className="text-white/90">Principal ML/AI @ VybeOS</span>
       </motion.div>
-      
-      <motion.button
-        onClick={handleScrollToAboutMe}
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3, delay: 1.1, ease: "easeOut" }}
-        whileHover={{ scale: 1.05, y: -2 }}
-        whileTap={{ scale: 0.95 }}
-        className="mt-8 px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all"
-      >
-        <span>Explore My Work</span>
-        <FaArrowDown className="animate-bounce" />
-      </motion.button>
     </div>
   );
 };

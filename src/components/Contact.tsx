@@ -12,6 +12,11 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
+const inputClasses = (hasError: boolean) =>
+  `w-full px-4 py-3 rounded-lg bg-white/5 border text-white placeholder-white/30 focus:outline-none focus:border-white/50 transition-colors ${
+    hasError ? "border-red-400/70" : "border-white/15"
+  }`;
+
 const Contact = () => {
   const {
     register,
@@ -27,73 +32,73 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-8 text-center">
-      <h2 className="text-4xl font-bold">Contact</h2>
+    <div className="w-full max-w-3xl mx-auto px-6 py-24 text-center">
+      <p className="text-xs tracking-[0.3em] text-white/40 uppercase mb-4">Contact</p>
+      <h2 className="font-serif text-5xl md:text-6xl text-white mb-4">
+        Let&rsquo;s build your next <span className="italic text-glow">big thing</span>
+      </h2>
+      <p className="text-white/50 mb-12">
+        No pressure — just a real conversation about what you&rsquo;re building.
+      </p>
+
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col items-center space-y-6 w-full max-w-2xl px-4"
+        className="flex flex-col items-center space-y-5 w-full text-left"
       >
-        {/* Name Field */}
         <div className="w-full">
-          <label htmlFor="name" className="block text-left font-medium text-gray-700">
+          <label htmlFor="name" className="block text-sm text-white/50 mb-2">
             Name
           </label>
           <input
             id="name"
             type="text"
+            placeholder="Your name"
             {...register("name")}
-            className={`w-full px-4 py-3 border rounded-md ${
-              errors.name ? "border-red-500" : "border-gray-300"
-            }`}
+            className={inputClasses(!!errors.name)}
           />
           {errors.name && (
-            <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>
+            <p className="mt-1 text-sm text-red-400">{errors.name.message}</p>
           )}
         </div>
 
-        {/* Email Field */}
         <div className="w-full">
-          <label htmlFor="email" className="block text-left font-medium text-gray-700">
+          <label htmlFor="email" className="block text-sm text-white/50 mb-2">
             Email
           </label>
           <input
             id="email"
             type="email"
+            placeholder="you@example.com"
             {...register("email")}
-            className={`w-full px-4 py-3 border rounded-md ${
-              errors.email ? "border-red-500" : "border-gray-300"
-            }`}
+            className={inputClasses(!!errors.email)}
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
+            <p className="mt-1 text-sm text-red-400">{errors.email.message}</p>
           )}
         </div>
 
-        {/* Message Field */}
         <div className="w-full">
-          <label htmlFor="message" className="block text-left font-medium text-gray-700">
+          <label htmlFor="message" className="block text-sm text-white/50 mb-2">
             Message
           </label>
           <textarea
             id="message"
+            placeholder="What are you building?"
             {...register("message")}
-            className={`w-full px-4 py-3 border rounded-md ${
-              errors.message ? "border-red-500" : "border-gray-300"
-            }`}
+            className={inputClasses(!!errors.message)}
             rows={6}
           ></textarea>
           {errors.message && (
-            <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
+            <p className="mt-1 text-sm text-red-400">{errors.message.message}</p>
           )}
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
           disabled={isSubmitting}
-          className="px-8 py-3 text-white bg-blue-500 rounded-md hover:bg-blue-600 disabled:bg-gray-400"
+          className="mt-4 px-10 py-3 rounded-full border border-white/25 bg-white/5 text-white hover:border-white/60 disabled:opacity-40 transition-colors"
         >
-          {isSubmitting ? "Submitting..." : "Submit"}
+          {isSubmitting ? "Sending..." : "Start the conversation"}
         </button>
       </form>
     </div>
@@ -101,4 +106,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

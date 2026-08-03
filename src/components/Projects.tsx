@@ -1,68 +1,68 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import REALHIRELOGO from '@/assets/logo-realhire.png'
+import { motion } from 'framer-motion';
+
 const PROJECTS = [
   {
     name: "Real Hire Platform",
-    image: REALHIRELOGO,
     link: "https://realhire.com",
     description:
-      "A scalable AI-driven recruiting SaaS platform connecting candidates with employers. Scaled to 10,000+ users with NLP-driven resume parsing and ML matching algorithms.",
+      "AI-driven recruiting SaaS scaled to 10,000+ users — NLP resume parsing and ML matching.",
   },
   {
-    name: "Solana Blockchain Token Launch Sniper",
-    link: "https://github.com/awhittle6",
-    description: 
-      "High-performance Rust trading bot with gRPC streaming and RPC analytics for real-time token evaluation and rapid transaction execution using bonding curve analysis."
-  },
-  {
-    name: "Real-Time Portfolio Risk Analytics",
+    name: "Solana Token Launch Sniper",
     link: "https://github.com/awhittle6",
     description:
-      "Distributed ML pipeline using Apache Kafka and Ray processing 500K+ events/sec with ensemble models for sub-second risk alerts on $10M+ portfolios.",
+      "High-performance Rust trading bot with gRPC streaming and bonding-curve analysis.",
   },
   {
-    name: "Production Performance Manufacturing",
+    name: "Portfolio Risk Analytics",
     link: "https://github.com/awhittle6",
     description:
-      "Automated manufacturing storyboard system for process capability, OEE, and yield analysis with complex relational database queries and data visualization.",
-  }
+      "Distributed ML pipeline on Kafka and Ray — 500K+ events/sec, sub-second risk alerts.",
+  },
+  {
+    name: "Manufacturing Analytics",
+    link: "https://github.com/awhittle6",
+    description:
+      "Automated storyboard system for process capability, OEE, and yield analysis.",
+  },
 ];
 
 const Projects = () => {
   return (
-    <div className="flex flex-col items-center justify-center space-y-8 text-center max-w-6xl mx-auto px-4">
-      <h2 className="text-5xl font-bold mb-4">Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+    <div className="w-full max-w-5xl mx-auto px-6 py-24">
+      <p className="text-xs tracking-[0.3em] text-white/40 uppercase mb-4">Selected work</p>
+      <h2 className="font-serif text-4xl md:text-5xl text-left text-white mb-16">
+        Unique. <span className="italic">Intentional.</span> Mine.
+      </h2>
+
+      <div className="border-t border-white/10">
         {PROJECTS.map((project, index) => (
-          <div
-            key={index}
-            className="group relative bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-green-500/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
+          <motion.div
+            key={project.name}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
+            viewport={{ once: true }}
           >
-            <Link href={project.link || '#'} target="_blank" rel="noopener noreferrer" className="block">
-              <div className="flex flex-col items-center space-y-4">
-                {project.image && (
-                  <div className="relative w-20 h-20 mb-2">
-                    <Image
-                      src={project.image}
-                      alt={project.name}
-                      width={80}
-                      height={80}
-                      className="rounded-lg object-contain"
-                    />
-                  </div>
-                )}
-                <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-green-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
+            <Link
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col md:flex-row md:items-center justify-between gap-2 py-8 border-b border-white/10 text-left hover:bg-white/[0.03] transition-colors px-2 md:px-4"
+            >
+              <div>
+                <h3 className="font-serif text-3xl md:text-4xl text-white/90 group-hover:text-white group-hover:italic transition-all">
                   {project.name}
                 </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-400/0 via-blue-400/0 to-green-400/0 group-hover:from-purple-400/5 group-hover:via-blue-400/5 group-hover:to-green-400/5 rounded-xl transition-all duration-300" />
+                <p className="text-white/50 text-sm mt-2 max-w-xl">{project.description}</p>
               </div>
+              <span className="text-white/40 text-sm tracking-wide whitespace-nowrap group-hover:text-white transition-colors">
+                Take a look →
+              </span>
             </Link>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

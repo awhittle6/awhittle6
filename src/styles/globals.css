@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Soft white glow on display type, like the template's hero */
+  .text-glow {
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.35), 0 0 120px rgba(255, 255, 255, 0.15);
+  }
+
+  /* Atmospheric fog — pale radial washes on black */
+  .fog {
+    background:
+      radial-gradient(60% 50% at 20% 100%, rgba(148, 163, 184, 0.16) 0%, transparent 70%),
+      radial-gradient(50% 45% at 85% 100%, rgba(148, 163, 184, 0.12) 0%, transparent 70%);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
