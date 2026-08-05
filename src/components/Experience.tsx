@@ -132,7 +132,7 @@ const Experience = () => {
                 className={`hidden md:flex absolute top-6 items-center gap-2 text-white/40 text-sm ${
                   index % 2 === 0
                     ? 'left-0 right-1/2 justify-start pl-2'
-                    : 'left-1/2 right-0 justify-end pr-2 md:flex-row-reverse'
+                    : 'left-1/2 right-0 justify-start pr-2 md:flex-row-reverse'
                 }`}
               >
                 <FaCalendarAlt className="text-xs" />
