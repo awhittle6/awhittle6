@@ -21,10 +21,9 @@ const experiences: ExperienceItem[] = [
     current: true,
     website: "https://wyea.ai",
     highlights: [
-      "Co-founded WYEA, a legal technology firm building custom AI systems around each law practice — not the other way around",
-      "Designed a verified-citation architecture where AI only asserts what it can ground in exact quotes from source documents, flagging anything it cannot verify",
-      "Built litigation workflow automation for California civil practice — discovery responses, motion drafting, and filing packages with statute-backed checks",
-      "Architected per-firm isolated deployments integrating with each firm's own document management and identity systems"
+      "Co-founded WYEA and took it from zero to live production deployments at multiple California law firms — each firm on its own isolated instance, integrated with its own document management and identity systems",
+      "Eliminated AI hallucination from legal output with a verified-citation architecture: every assertion is grounded in an exact quote from a source document or flagged as unverifiable, so nothing unsupported ever reaches an attorney",
+      "Cut days of manual litigation work to minutes for California civil practice — discovery responses, motion drafting, and filing packages generated with per-statute checks that catch defects before anything is served or filed"
     ]
   },
   {
@@ -35,9 +34,9 @@ const experiences: ExperienceItem[] = [
     current: true,
     website: "https://www.vybeos.co",
     highlights: [
-      "Principal engineer for the ML systems behind VybeOS, the AI-native creative operating system for modern brands",
-      "Building brand-memory infrastructure that captures a brand's voice, visual identity, and performance data to power on-brand generation",
-      "Developing multi-channel content generation and closed-loop creative analytics pipelines"
+      "Principal engineer through VybeOS's growth from zero to $14M in revenue — the ML systems turning a brand's voice, visual identity, and performance data into on-brand content generation across every channel",
+      "Built the brand-memory infrastructure that keeps generated content in-voice and on-identity, so brands scale output without diluting what makes them recognizable",
+      "Closed the loop between creative and results: analytics pipelines feed campaign performance back into generation, so every asset produced is informed by what actually converted"
     ]
   },
   {
@@ -46,7 +45,7 @@ const experiences: ExperienceItem[] = [
     location: "Orange County, CA",
     duration: "2025 - 2026",
     highlights: [
-      "Founded an applied-AI startup; designed and operated the full product and cloud infrastructure end to end on GCP",
+      "Took an applied-AI product from concept to production single-handedly — full product, ML stack, and cloud infrastructure shipped and operated end to end on GCP",
       "Wound down operations in 2026 to focus on WYEA"
     ]
   },
@@ -57,10 +56,10 @@ const experiences: ExperienceItem[] = [
     duration: "2025 - 2026",
     website: "https://joinautopilot.com",
     highlights: [
-      "Spearheaded legacy system modernization achieving 67% computation reduction and $500K+ annual savings through Timescale infrastructure migration",
-      "Led complete architecture of performance analytics infrastructure serving all investment products with real-time metrics and dynamic rebalancing algorithms",
-      "Architected MCP server infrastructure for AI-driven compliance automation, reducing support tickets by 40%",
-      "Rebuilt mission-critical asset quote microservice from NestJS to Rust, achieving 99.9% uptime"
+      "Core engineer through Autopilot's growth from a $20M to a $100M valuation — owned the performance analytics infrastructure serving every investment product with real-time metrics and dynamic rebalancing",
+      "Delivered $500K+ in annual savings and a 67% computation reduction by modernizing legacy systems onto Timescale infrastructure",
+      "Cut support tickets 40% with MCP server infrastructure for AI-driven compliance automation",
+      "Rebuilt the mission-critical asset quote microservice from NestJS to Rust, achieving 99.9% uptime"
     ]
   },
   {
@@ -95,7 +94,7 @@ const Experience = () => {
     <div className="w-full max-w-5xl mx-auto px-6 py-24">
       <p className="text-xs tracking-[0.3em] text-white/40 uppercase mb-4">Experience</p>
       <h2 className="font-serif text-4xl md:text-5xl text-left text-white mb-16">
-        Where I&rsquo;ve <span className="italic">built.</span>
+        Where I&rsquo;ve <span className="italic">delivered.</span>
       </h2>
 
       <div className="relative">

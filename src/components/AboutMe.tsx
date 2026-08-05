@@ -57,9 +57,9 @@ const AboutMe = () => {
             Founder and engineer with 5+ years building AI-driven products end to end. I
             co-founded WYEA, a legal technology firm building verified, grounded AI systems for
             law practices, and serve as Principal ML/AI Engineer at VybeOS, the AI-native
-            creative operating system for modern brands. Before that: mission-critical financial
-            systems at Autopilot, co-founding Real Hire to 10,000+ users and $300K in seed
-            funding, and ML frameworks at Wells Fargo.
+            creative operating system for modern brands. Before that: engineering through
+            Autopilot&rsquo;s growth from a $20M to a $100M valuation, co-founding Real Hire to
+            10,000+ users and $300K in seed funding, and ML frameworks at Wells Fargo.
           </motion.p>
 
           <div className="space-y-3">
